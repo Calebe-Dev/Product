@@ -25,3 +25,29 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+#Anotacoes
+- O projeto foi gerado com o Angular CLI versão 18.2.0.
+- Para iniciar o servidor de desenvolvimento, execute o comando `ng serve`.
+- Para gerar um novo componente, execute o comando `ng generate component component-name`.
+- Para executar os testes unitários, execute o comando `ng test`.
+- Para executar os testes e2e, execute o comando `ng e2e`.
+ng s -o
+ng g c component-name
+ng g d directive-name
+nd g s  service-name
+
+
+git clone
+git add .
+git commit -m "mensagem"
+git push -u origin main
+git branch -M main
+git remote add origin https://github.com/username/repository.git
+git pull
+
+npm install -g json-server@0.17.4    
+
+json-server --watch db.json
+
+chamadas ao backand podem ser bloqueantes e não bloqueantes clear

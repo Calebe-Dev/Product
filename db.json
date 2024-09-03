@@ -1,0 +1,28 @@
+{
+ "products" :[
+    {
+      "id"        :1, 
+      "name"      :"i7",
+      "price"     :6000.00,
+      "category"  :"Proficional"
+    },
+    {
+      "id"        :2, 
+      "name"      :"i5",
+      "price"     :4000.00,
+      "category"  :"Intermediario"
+    },
+    {
+      "id"        :1, 
+      "name"      :"i3",
+      "price"     :1800.00,
+      "category"  :"Basico"
+    },
+    {
+      "id"        :1, 
+      "name"      :"Xeon",
+      "price"     :2000.00,
+      "category"  :"Esperimental"
+    }
+  ]
+}
