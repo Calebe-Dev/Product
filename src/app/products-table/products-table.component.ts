@@ -23,4 +23,11 @@ export class ProductsTableComponent {
       
     )
   }
+
+  delete(product: Product){
+    this.service.delete(product).subscribe({
+      next: () => this.loadProducts()
+    })
+
+  }
 }

@@ -19,7 +19,7 @@
       <td>Processador: {{product.name}}</td>
       <td>R$ {{product.price}}</td>
       <td>{{product.category}}</td>
-      <td><button class="btn btn-danger">Remover</button></td>
+      <td><button class="btn btn-danger"(click)="delete(product)">Remover</button></td>
     </tr>
   </tbody>
   </table>
