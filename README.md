@@ -46,6 +46,7 @@ git branch -M main
 git remote add origin https://github.com/username/repository.git
 git pull
 
+
 npm install -g json-server@0.17.4    
 
 json-server --watch db.json
