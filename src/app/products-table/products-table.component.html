@@ -1,8 +1,4 @@
 <div class="container">
-
-  <div class="display5">
-    <marquee><h1>Cadastro de produtos</h1> </marquee>
-  </div>
   <table class="table table-striped">
   <thead>
     <tr>
@@ -16,7 +12,7 @@
   <tbody>
     <tr *ngFor="let product of products">
       <th scope="row">{{product.id}}</th>
-      <td>Processador: {{product.name}}</td>
+      <td>Processador: <a [routerLink]="['/product',product.id]">{{product.name}}</a></td>
       <td>R$ {{product.price}}</td>
       <td>{{product.category}}</td>
       <td><button class="btn btn-danger"(click)="delete(product)">Remover</button></td>
