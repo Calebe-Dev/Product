@@ -1,16 +1,18 @@
   <div class="container">
     <h1>Cadastro de produtos</h1>
+    <form [formGroup]='formGrupProduct'>
     <div class="mb-3">
-        <label for="name" class="form-label">Email address</label>
-        <input type="text" class="form-control" id="name" placeholder="Digite o nome do produto">
+        <label for="form" class="form-label">Nome</label>
+        <input formControlName="name" class="form-control" id="name" placeholder="Digite o nome do produto">
     </div>
     <div class="mb-3">
         <label for="price" class="form-label">Preço</label>
-        <input type="number" class="form-control" id="price" placeholder="Digite o preço do produto">
-    </div>
+        <input formControlName="price" type="number" class="form-control" id="price" placeholder="Digite o preço do produto">
+    </div> 
     <div class="mb-3">
         <label for="category" class="form-label">Categoria</label>
-        <input type="text" class="form-control" id="name" placeholder="Digite a categoria do produto">
+        <input formControlName="category" type="text" class="form-control" id="name" placeholder="Digite a categoria do produto">
     </div>
-    <button type="submit" class="btn btn-primary">Cadastrar</button>
+        <button (click)="update()" type="submit" class="btn btn-primary">Cadastrar</button>
+  </form>
   </div>
