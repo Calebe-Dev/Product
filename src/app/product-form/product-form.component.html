@@ -1,5 +1,7 @@
   <div class="container">
-    <h1>Cadastro de produtos</h1>
+    <div class="display5">
+        <marquee><h1>Cadastro de produtos</h1> </marquee>
+    </div>
     <form [formGroup]='formGrupProduct'>
     <div class="mb-3">
         <label for="form" class="form-label">Nome</label>
@@ -13,6 +15,8 @@
         <label for="category" class="form-label">Categoria</label>
         <input formControlName="category" type="text" class="form-control" id="name" placeholder="Digite a categoria do produto">
     </div>
-        <button (click)="update()" type="submit" class="btn btn-primary">Cadastrar</button>
+        <button *ngIf="isEditing" (click)="update()" type="submit" class="btn btn-primary">Cadastrar</button>
+        <button *ngIf="!isEditing" (click)="save()" type="submit" class="btn btn-primary">Salvar</button>
+
   </form>
   </div>

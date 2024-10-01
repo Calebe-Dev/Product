@@ -12,6 +12,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class ProductFormComponent implements OnInit{
   
   formGrupProduct: FormGroup;
+  isEditing: boolean = false; // Variável que controla a exibição dos botões
 
 
   constructor(private router: Router,
@@ -28,9 +29,15 @@ export class ProductFormComponent implements OnInit{
           }
  
 
+  
+
   ngOnInit() {
     const id = Number(this.activeRouter.snapshot.paramMap.get("id"))
-    this.loadProduct(id);
+      if(id != 0){
+        this.loadProduct(id);
+        this.isEditing=true;
+        // Altera is editing para verdadeiro
+      }
   }
 
   loadProduct(id: number) {
@@ -45,4 +52,9 @@ export class ProductFormComponent implements OnInit{
     })
   }
 
+  save(){
+    this.service.save(this.formGrupProduct.value).subscribe({
+      next: () => this.router.navigate(['products'])
+    })
+  }
 }
